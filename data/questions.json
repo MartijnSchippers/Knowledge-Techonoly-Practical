@@ -1,0 +1,192 @@
+{
+    "currency_page" : 
+    {
+        "currency_question" : 
+        {
+            "prompt" : "Is the currency asked in Euro?",
+            "type" : "checkbox",
+            "variable_to_change": "stable_coin",
+            "options" : {"yes" : 1, "no" : 0}
+        }
+        
+    },
+    "geographic_location_page" : 
+    {
+        "geographic_question" :
+        {
+            "prompt" : "From what country is the company operating in?",
+            "type" : "select_box",
+            "variable_to_change" : "safe_country",
+            "options" : {"The Netherlands" : 1, "England" : 1, "Belgium" : 1 , "Luxembourg" : 1, "Denmark" : 1, "Sweden" : 1, "Norway" : 1, "Other" : 0}
+        }
+    },
+    "EBITDA_page" : 
+    {
+        "EBITDA_question" : 
+        {
+            "prompt" : "What is the company's EBITDA (in million euro)?",
+            "type" : "text_input",
+            "variable_to_change" : "EBTIDA_property",
+            "options" : "size_t"
+        },
+        "leverage_question" : 
+        {
+            "prompt" : "What is the company's leverage?",
+            "type" : "text_input",
+            "variable_to_change" : "leverage_property",
+            "options" : "size_t"
+        }
+    },
+    "exposure_page" :
+    {
+        "shared_pledges_question" :
+        {
+            "prompt" : "Are there shared pledges?",
+            "type" : "checkbox",
+            "variable_to_change" : "shared_pledges_property",
+            "options" : {"yes" : 1, "no" : 0}
+        },
+
+        "bank_account_pledge_question" :
+        {
+            "prompt" : "Is there a bank account pledge?",
+            "type" : "checkbox",
+            "variable_to_change" : "bank_account_pledge_property",
+            "options" : {"yes" : 1, "no" : 0}
+        },
+
+        "substancial_material_pledges_question" :
+        {
+            "prompt" : "Are there substancial material activa present?",
+            "type" : "checkbox",
+            "variable_to_change" : "substancial_material_pledge_property",
+            "options" : {"yes" : 1, "no" : 0},
+            "subquestion" : 
+            {
+                "prompt" : " -> Are these subtancial material, in case of default, for the loan giver?",
+                "type" : "checkbox",
+                "variable_to_change" : "substancial_material_property",
+                "options" : {"yes" : 1, "no" : 0}
+            }
+        },
+
+        "first_right_insurances_question" :
+        {
+            "prompt" : "Has the loan giver right on the first rights of these insureances?",
+            "type" : "checkbox",
+            "variable_to_change" : "first_right_insurances_property",
+            "options" : {"yes" : 1, "no" : 0}
+        },
+
+        "net_leverage_according_agreements_question" :
+        {
+            "prompt" : "Is the net leverage according to the agreements of the loan giver?",
+            "type" : "checkbox",
+            "variable_to_change" : "net_leverage_according_agreements_property",
+            "options" : {"yes" : 1, "no" : 0}
+        },
+
+        "arrangement_coverage_ratio_question" :
+        {
+            "prompt" : "Are there arrangements made about the coverage ratio, which are completely in line with the need of the loan giver?",
+            "type" : "checkbox",
+            "variable_to_change" : "arrangement_coverage_ratio_property",
+            "options" : {"yes" : 1, "no" : 0}
+        }
+    },
+
+    "credit_rating" :
+    {
+        "credit_rating_question" :
+        {
+            "prompt" : "Select the implied credit rating for this company",
+            "type" : "select_box",
+            "variable_to_change" : "credit_rating_property",
+            "options" : {"C" : 0, "CC" : 0, "CCC" : 0, "B" : 1, "BB" : 1, "BBB" : 1, "A" : 1, "AA" : 1, "AAA" : 1}
+        }
+    },
+
+    "average_rating" :
+    {
+        "average_rating_question" :
+        {
+            "prompt" : "Select the average credit rating of the total loan portfolio with this loan included",
+            "type" : "select_box",
+            "variable_to_change" : "average_rating_property",
+            "options" : {"C" : 0, "CC" : 0, "CCC" : 0, "B" : 0, "BB" : 1, "BBB" : 1, "A" : 1, "AA" : 1, "AAA" : 1}
+        }
+    },
+
+    "interest_rate_risk_page" :
+    {
+        "interest_rate_risk_question" :
+        {
+            "prompt" : "What is the requested interest rate?",
+            "type" : "text_input",
+            "variable_to_change" : "requested_interest_rate_property",
+            "options" : "size_t"
+        }
+    },
+
+    "LMA_model_page" :
+    {
+        "LMA_model_question" : 
+        {
+            "prompt" : "Is the loan according to the LMA model?",
+            "type" : "checkbox",
+            "variable_to_change" : "LMA_model_property",
+            "options" : {"yes":1, "no":0}
+        }
+    },
+
+    "ESG_policy_in_use" : 
+    {
+        "environmental_question" :
+        {
+            "prompt" : "The company is well aware of climate change and is aware of the consequenes of their behaviour towards the climate",
+            "type" : "checkbox",
+            "variable_to_change" : "ESG_environmental_property",
+            "options" : {"yes":1, "no":0}
+        },
+
+        "social_question" :
+        {
+            "prompt" : "The company is taking actions to achieve diversity, inclusivity and equaliy of people across their employees",
+            "type" : "checkbox",
+            "variable_to_change" : "ESG_social_property",
+            "options" : {"yes":1, "no":0}
+        },
+
+        "governance_question" :
+        {
+            "prompt" : "The company's board and governance is politically correct",
+            "type" : "checkbox",
+            "variable_to_change" : "ESG_governance_property",
+            "options" : {"yes":1, "no":0}
+        }
+    },
+
+    "duration_contract_question" :
+    {
+        "duration_question" :
+        {
+            "prompt" : "What is the duration of the contract? (in years)",
+            "type" : "text_input",
+            "variable_to_change" : "duration_contract_property",
+            "options" : "size_t"
+        }
+    },
+
+    "stable_income_question" :
+    {
+        "stable_income_question" :
+        {
+            "prompt" : "Has the company got stable income?",
+            "type" : "checkbox",
+            "variable_to_change" : "stable_income_property",
+            "options" : {"yes":1, "no":0}
+        }
+    }
+
+
+}

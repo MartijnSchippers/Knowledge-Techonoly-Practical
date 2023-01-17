@@ -1,0 +1,180 @@
+{
+    "currency_no_danger" :
+    {
+        "properties" :
+        [
+            {
+                "stable_coin" : true
+            }
+        ]
+    },
+
+    "it_is_a_safe_country" :
+    {
+        "properties" :
+        [   
+            {
+                "safe_country" : true
+            }
+        ]
+    },
+
+    "EBITDA_compliant" :
+    {
+        "properties" : 
+        [
+            {
+                "EBTIDA_property" : true,
+                "leverage_property" : true
+            }
+        ]
+    },
+
+    "good_exposure" :
+    {
+        "rules" :
+        {
+            "good_securities_for_giver" :
+            {
+                "properties" :
+                [
+                    {
+                        "shared_pledges_property" : true,
+                        "bank_account_pledge_property" : true,
+                        "substancial_material_pledge_property" : false
+                    },
+                    {
+                        "shared_pledges_property" : false,
+                        "bank_account_pledge_property" : true,
+                        "substancial_material_pledge_property" : true,
+                        "substancial_material_loan_giver_property" : true
+                    },
+                    {
+                        "shared_pledges_property" : true,
+                        "bank_account_pledge_property" : true
+                    }
+                ]
+            },
+            "the_giver_has_first_rights_on_securities" :
+            {
+                "properties" :
+                [
+                    {
+                        "first_right_insurances_property" : true
+                    }
+                ]
+            },
+            "there_are_good_financial_covanents" : 
+            {
+                "properties" :
+                [
+                    {
+                        "net_leverage_according_agreements_property" : true,
+                        "arrangement_coverage_ratio_property" : true
+                    }
+                ]
+                
+            }
+        }
+    },
+
+    "sufficient_credit_rating" :
+    {
+        "properties" :
+        [
+            {
+                "credit_rating_property" : true
+            }
+        ]
+    },
+
+    "sufficient_average_rating" :
+    {
+        "properties" :
+        [
+            {
+                "average_rating_property" : true
+            }
+        ]
+    },
+
+    "interest_rate_risk" : 
+    {
+        "properties" :
+        [
+            {
+                "requested_interest_rate_property" : false
+            }
+        ]
+    },
+
+    "average_spread_okay" :
+    {
+        "properties" :
+        [
+            {
+                "requested_interest_rate_property" : true
+            }
+        ]
+    },
+
+    "LMA_model_correct" : 
+    {
+        "properties" :
+        [
+            {
+                "LMA_model_property" : true
+            }
+        ]
+    },
+
+    "ESG_correct" : 
+    {
+        "properties" :
+        [
+            {
+                "ESG_environmental_property" : true,
+                "ESG_social_property" : true,
+                "ESG_governance_property" : true
+            },
+
+            {
+                "ESG_environmental_property" : false,
+                "ESG_social_property" : true,
+                "ESG_governance_property" : true
+            },
+
+            {
+                "ESG_environmental_property" : true,
+                "ESG_social_property" : false,
+                "ESG_governance_property" : true
+            },
+
+            {
+                "ESG_environmental_property" : true,
+                "ESG_social_property" : true,
+                "ESG_governance_property" : false
+            }
+        ]
+    },
+
+    "valid_duration_contract" :
+    {
+        "properties" : 
+        [
+            {
+                "duration_contract_property" : true
+            }
+        ]
+    },
+
+    "company_has_stable_income" :
+    {
+        "properties" :
+        [
+            {
+                "stable_income_property" : true
+            }
+        ]
+    }
+}

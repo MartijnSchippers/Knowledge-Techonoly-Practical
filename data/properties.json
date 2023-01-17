@@ -1,0 +1,142 @@
+{
+    "stable_coin" : 
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "currency_question"
+    },
+
+    "safe_country" : 
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "geographic_question"
+    },
+
+    "EBTIDA_property" :
+    {
+        "operator" : ">",
+        "value" : 10,
+        "question" : "private_loan_question"
+    },
+
+    "leverage_property" :
+    {
+        "operator" : "<",
+        "value" : 6,
+        "question" : "strong_agreements_question"
+    },
+
+    "shared_pledges_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "shared_pledges_question"
+    },
+
+    "bank_account_pledge_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "bank_account_pledge_question"
+    },
+
+    "substancial_material_pledge_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "substancial_material_pledges_question"
+    },
+
+    "substancial_material_loan_giver_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "substancial_material_loan_giver_property"
+    },
+
+    "first_right_insurances_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "first_right_insurances_question"
+    },
+
+    "net_leverage_according_agreements_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "net_leverage_according_agreements_question"
+    },
+
+    "arrangement_coverage_ratio_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "arrangement_coverage_ratio_question"
+    },
+
+    "credit_rating_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "credit_rating_question"
+    },
+
+    "average_rating_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "average_rating_question"
+    },
+
+    "requested_interest_rate_property" : 
+    {
+        "operator" : ">",
+        "value" : 2.75,
+        "question" : "average_spread_question"
+    },
+
+    "LMA_model_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "LMA_model_question"
+    },
+
+    "ESG_environmental_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "ESG_environmental_question"
+    },
+
+    "ESG_social_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "ESG_social_question"
+    },
+
+    "ESG_governance_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "ESG_governance_question"
+    },
+
+    "duration_contract_property" :
+    {
+        "operator" : ">=<",
+        "value" : [3, 7],
+        "question" : "duration_contract_question"
+    },
+
+    "stable_income_property" :
+    {
+        "operator" : "==",
+        "value" : 1,
+        "question" : "stable_income_question"
+    }
+
+}
