@@ -113,7 +113,7 @@
         "properties" :
         [
             {
-                "requested_interest_rate_property" : true
+                "average_spread_property" : true
             }
         ]
     },

@@ -128,6 +128,17 @@
         }
     },
 
+    "average_spread_page" :
+    {
+        "Average_spread_question" :
+        {
+            "prompt" : "What is the average spread?",
+            "type" : "text_input",
+            "variable_to_change" : "requested_interest_rate_property",
+            "options" : "size_t"
+        }
+    },
+
     "LMA_model_page" :
     {
         "LMA_model_question" : 

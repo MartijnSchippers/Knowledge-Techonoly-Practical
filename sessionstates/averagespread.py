@@ -2,7 +2,7 @@ import streamlit as st
 from sessionstates import util
 
 def average_spread_page():
-    st.title("Interest rate risk")
+    st.title("Average spread")
 
     #question name
     util.ask_initial_questions("average_spread_page")

@@ -97,6 +97,13 @@
         "question" : "average_spread_question"
     },
 
+    "average_spread_property" :
+    {
+        "operator" : ">",
+        "value" : 6.05,
+        "question" : "average_spread_question"
+    },
+
     "LMA_model_property" :
     {
         "operator" : "==",
