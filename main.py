@@ -7,16 +7,13 @@ from sessionstates.geographiclocation import geo_location_page
 from sessionstates.ebitda import ebitda
 from sessionstates.esg import ESG_page
 from sessionstates.exposurepage import exposure_page
-from sessionstates.privateloans import private_loans
 from sessionstates.creditrating import credit_rating_page
-#rom sessionstates.errorpage import error_page
 from sessionstates.interestraterisk import interest_rate_risk_page
 from sessionstates.lmamodel import LMA_model_page
 from sessionstates.pagenotfound import page_not_found
 from sessionstates.results_page import results_page
 from sessionstates.stableincome import stable_income_page
 from sessionstates.util import initialize_properties_if_required, get_desired_rule
-import json
 import streamlit as st
 
 #functions that belong to main.py
@@ -38,7 +35,7 @@ def view_desired_page():
             credit_rating_page()
         case "sufficient_average_rating":
             average_rating_page()
-        case "interest_rate_risk":
+        case "no_interest_rate_risk":
             interest_rate_risk_page()
         case "average_spread_okay":
             average_spread_page()
@@ -50,6 +47,8 @@ def view_desired_page():
             contract_duraction_page()
         case "company_has_stable_income":
             stable_income_page()
+        case "results":
+            results_page()
         case default:
             return page_not_found()
 

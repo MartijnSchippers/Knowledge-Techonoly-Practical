@@ -8,7 +8,7 @@ properties = data.properties
 rules = data.rules
 
 def currency_page():
-    st.title("Loan giving machine thing [TODO: make a name]")
+    st.title("Knowledge Technology Practical project")
 
     #give all initial questions
     util.ask_initial_questions("currency_page")

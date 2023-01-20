@@ -3,5 +3,12 @@
     "it_is_a_safe_country" : true,
     "EBITDA_compliant" : true,
     "good_exposure" : true,
-    "good_issue_rating" : true
+    "sufficient_credit_rating" : true,
+    "sufficient_average_rating" : true,
+    "no_interest_rate_risk" : true,
+    "average_spread_okay" : true,
+    "LMA_model_correct" : true,
+    "ESG_correct" : true,
+    "valid_duration_contract" : true,
+    "company_has_stable_income" : true
 }

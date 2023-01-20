@@ -5,6 +5,7 @@ import random
 rules = data.rules
 questions = data.questions
 properties = data.properties
+final_rule = data.final_rule
 
 def ask_initial_questions(question_name_page):
     #   change the st so that all the initial questions are asked
@@ -58,6 +59,7 @@ def ask_subquestion_if_available(question):
     if "subquestion" in question:
         subquestion = question["subquestion"]
         print("there is a subquestion detected")
+        #print(get_variable_to_change(subquestion))
         ask_checkbox_questions(subquestion)
 
     
@@ -74,9 +76,21 @@ def ask_text_box(question):
     st.session_state['properties'][sessionsstate_variable] = answer_int
 
 def get_desired_rule():
+    # return to the conclusions when necessary
+    for rule_str in final_rule:
+        if (st.session_state.rules[rule_str] == None):
+            break
+        if (st.session_state.rules[rule_str] != final_rule[rule_str]):
+            return "results"
+
+    #check which rule to ask
     for main_rule_str in rules:
         if st.session_state.rules[main_rule_str] == None:
             return main_rule_str
+
+    # return to the results page when all rules true
+    return "results"
+        
 
 def get_variable_to_change(question):
     #   return the variable that the questions database indicates to return
@@ -96,6 +110,7 @@ def next_page_button(rule_str):
         update_temporary_properties()
         update_rule(rule_str)
         #st.session_state['state'] = get_desired_page()
+        print(st.session_state.properties)
         st.experimental_rerun()
 
 def initialize_properties_if_required():
@@ -180,7 +195,6 @@ def check__correctness_rule_properties_chunk(property_chunk):
         current_value = st.session_state.properties[property_str]
         threshold_value = properties[property_str]['value']
         operator = properties[property_str]['operator']
-        print("\n value: ", current_value)
         if not (isinstance(current_value, int)):
             return False
         else:
@@ -193,5 +207,8 @@ def check__correctness_rule_properties_chunk(property_chunk):
                         return True
                 case "==":
                     if current_value == threshold_value:
+                        return True
+                case ">=<":
+                    if current_value >= threshold_value[0] and current_value <= threshold_value[1]:
                         return True
         return False

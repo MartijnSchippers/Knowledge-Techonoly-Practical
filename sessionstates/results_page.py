@@ -2,84 +2,38 @@ import streamlit as st
 import data
 from sessionstates import util
 
-# final_rule = data.final_rule
+final_rule = data.final_rule
 rules = data.rules
 
-def check_correctness(rule_value, state_value, operator):
-    match operator:
-        case "==":
-            if rule_value == state_value:
-                return True
-            return False
-        case ">":
-            if state_value > rule_value:
-                return True
-            return False
-        case "<":
-            if state_value < rule_value:
-                return True
-            return False
-
-def write_rule(rule_name, rule_is_correct):
+def write_rule(rule_name):
     style = "color: #cc0f0f"
-    if not rule_is_correct:
-        style = "body {color: #a7f146;}"
-    st.write("<style>", style, "</style>", "The rule ", rule_name, " is ", rule_is_correct, unsafe_allow_html=True)
-    if not rule_is_correct:
-        rule = False
+    # if not rule_is_correct:
+    #     style = "body {color: #a7f146;}"
+    st.write("<style>", style, "</style>", rule_name, unsafe_allow_html=True)
+    # if not rule_is_correct:
+    #     rule = False
+
+def check_correctness_all_rules():
+    for rule_str in final_rule:
+        if st.session_state.rules[rule_str] != final_rule[rule_str]:
+            write_rule(rules[rule_str]["incorrect_message"])
+            return False
+        write_rule(rules[rule_str]["correct_message"])
+    return True
 
 def results_page():
-    #   At this stage, all the properties are already filled in
-    #   Steps:
-    #   For every rule, check every property
-    #   Check for every property, if it complies with its values
-    #   1 rule not true -> not a good investment
-    #   all rules true -> good investment
-
-    st.title("results should be displayed here")
-    print(st.session_state)
-    mainrule = True
-    for rule_str in rules:              #check if rules are correct, to obtain the main rule correctness
-        rule = True
-        #check if all properties are true accordign to their own needs
-        for property_str in rules[rule_str]:
-            property = rules[rule_str][property_str]
-            operator = property["operator"]
-            rule_value = property["value"]
-            state_value = st.session_state['properties'][property_str]
-            property_correct = check_correctness(rule_value, state_value, operator)
-
-            if not property_correct:
-                rule = False
-        
-        if rule == False:
-            mainrule = False
-
-        #write the rule
-        write_rule(rule_str, rule)
-        
-    text = ""
-    if (mainrule == False):
-        text = "not"
-    st.write("Conclusion: it is ", text, "recommended to give this loan")
-    #     current_value = st.session_state['properties'][property_str]
-    #     threshold_value = rules[rule_str][property_str]['value']
-    #     operator = rules[rule_str][property_str]['operator']
-    #     if not (isinstance(current_value, int)):
-    #         rule = False
-    #     else:
-    #         match operator:
-    #             case ">":
-    #                 if current_value < threshold_value:
-    #                     rule = False
-    #             case "<":
-    #                 if current_value > threshold_value:
-    #                     rule = False
-    #             case "==":
-    #                 if current_value != threshold_value:
-    #                     rule = False
-    # st.session_state['rules'][rule_str] = rule
-    # print(st.session_state['rules'])
+    #   This page draws a conclusion and lets the user know
+    st.title("Conclusion")
+    conclusion = "Conclusion: the loan should"
 
     #steps:
-    #
+    #   Check all main rules for correctness according to final_rule
+    #   If any rule does not comply with the final rule, then the conclusion is
+    #   that the loan should not be granted.
+    #   If all rules are accoring to the final rule model, then the conclusion
+    #   is that the loan could be granted
+    if not check_correctness_all_rules():
+        conclusion += " not"
+    conclusion += " be granted"
+    
+    st.write(conclusion)

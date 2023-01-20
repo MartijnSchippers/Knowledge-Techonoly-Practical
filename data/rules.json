@@ -6,7 +6,10 @@
             {
                 "stable_coin" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The loan is given in euro",
+        "incorrect_message" : "The loan is not given in euro"
     },
 
     "it_is_a_safe_country" :
@@ -16,7 +19,10 @@
             {
                 "safe_country" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The comany is located in a safe country",
+        "incorrect_message" : "The company is not located in a safe country"
     },
 
     "EBITDA_compliant" :
@@ -27,7 +33,10 @@
                 "EBTIDA_property" : true,
                 "leverage_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The loan is EBITDA compliant",
+        "incorrect_message" : "The loan is not EBITDA compliant"
     },
 
     "good_exposure" :
@@ -40,11 +49,11 @@
                 [
                     {
                         "shared_pledges_property" : true,
-                        "bank_account_pledge_property" : true,
-                        "substancial_material_pledge_property" : false
+                        "bank_account_pledge_property" : true
+                        
                     },
                     {
-                        "shared_pledges_property" : false,
+                        
                         "bank_account_pledge_property" : true,
                         "substancial_material_pledge_property" : true,
                         "substancial_material_loan_giver_property" : true
@@ -69,13 +78,18 @@
                 "properties" :
                 [
                     {
-                        "net_leverage_according_agreements_property" : true,
+                        "net_leverage_according_agreements_property" : true
+                    },
+                    {
                         "arrangement_coverage_ratio_property" : true
                     }
                 ]
                 
             }
-        }
+        },
+
+        "correct_message" : "The protection provided by the security rights is sufficient",
+        "incorrect_message" : "The protection provided by the security rights is insufficient"
     },
 
     "sufficient_credit_rating" :
@@ -85,7 +99,10 @@
             {
                 "credit_rating_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "There is sufficient credit rating",
+        "incorrect_message" : "there is insufficient credit rating"
     },
 
     "sufficient_average_rating" :
@@ -95,17 +112,23 @@
             {
                 "average_rating_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The average rating is sufficient",
+        "incorrect_message" : "The average rating is not sufficient"
     },
 
-    "interest_rate_risk" : 
+    "no_interest_rate_risk" : 
     {
         "properties" :
         [
             {
-                "requested_interest_rate_property" : false
+                "requested_interest_rate_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The interest rate risk is low enough",
+        "incorrect_message" : "The interest rate risk is too high"
     },
 
     "average_spread_okay" :
@@ -115,7 +138,10 @@
             {
                 "average_spread_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The average spread is okay",
+        "incorrect_message" : "The average spread is not okay"
     },
 
     "LMA_model_correct" : 
@@ -125,7 +151,10 @@
             {
                 "LMA_model_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The text of the loan documentation is structured according to the LMA model",
+        "incorrect_message" : "The text of the loan documentation is not structured according to the LMA model"
     },
 
     "ESG_correct" : 
@@ -155,7 +184,10 @@
                 "ESG_social_property" : true,
                 "ESG_governance_property" : false
             }
-        ]
+        ],
+
+        "correct_message" : "The ESG policy is sufficiently available",
+        "incorrect_message" : "The ESG policy is insufficiently available"
     },
 
     "valid_duration_contract" :
@@ -165,7 +197,10 @@
             {
                 "duration_contract_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The duration of the contract is between 3 and 7 years",
+        "incorrect_message" : "The duration of the contract is lower than 3 years or higher than 7 years"
     },
 
     "company_has_stable_income" :
@@ -175,6 +210,9 @@
             {
                 "stable_income_property" : true
             }
-        ]
+        ],
+
+        "correct_message" : "The company has stable income",
+        "incorrect_message" : "The company has no stable income"
     }
 }

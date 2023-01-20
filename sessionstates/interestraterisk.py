@@ -6,4 +6,4 @@ def interest_rate_risk_page():
 
     util.ask_initial_questions("interest_rate_risk_page")
 
-    util.next_page_button("interest_rate_risk")
+    util.next_page_button("no_interest_rate_risk")

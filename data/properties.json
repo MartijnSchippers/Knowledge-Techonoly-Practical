@@ -94,14 +94,14 @@
     {
         "operator" : ">",
         "value" : 2.75,
-        "question" : "average_spread_question"
+        "question" : "interest_rate_risk_question"
     },
 
     "average_spread_property" :
     {
         "operator" : ">",
         "value" : 6.05,
-        "question" : "average_spread_question"
+        "question" : "average_spread_question (in percentage)"
     },
 
     "LMA_model_property" :

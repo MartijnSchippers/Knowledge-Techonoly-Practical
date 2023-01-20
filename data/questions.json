@@ -65,7 +65,7 @@
             {
                 "prompt" : " -> Are these subtancial material, in case of default, for the loan giver?",
                 "type" : "checkbox",
-                "variable_to_change" : "substancial_material_property",
+                "variable_to_change" : "substancial_material_loan_giver_property",
                 "options" : {"yes" : 1, "no" : 0}
             }
         },
@@ -121,7 +121,7 @@
     {
         "interest_rate_risk_question" :
         {
-            "prompt" : "What is the requested interest rate?",
+            "prompt" : "What is the requested interest rate? (in percentage)",
             "type" : "text_input",
             "variable_to_change" : "requested_interest_rate_property",
             "options" : "size_t"
@@ -134,7 +134,7 @@
         {
             "prompt" : "What is the average spread?",
             "type" : "text_input",
-            "variable_to_change" : "requested_interest_rate_property",
+            "variable_to_change" : "average_spread_property",
             "options" : "size_t"
         }
     },
@@ -170,7 +170,7 @@
 
         "governance_question" :
         {
-            "prompt" : "The company's board and governance is politically correct",
+            "prompt" : "The company's board and governance is according to the ESG policy",
             "type" : "checkbox",
             "variable_to_change" : "ESG_governance_property",
             "options" : {"yes":1, "no":0}

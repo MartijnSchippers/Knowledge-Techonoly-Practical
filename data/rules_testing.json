@@ -1,0 +1,21 @@
+{
+    "interest_rate_risk" : 
+    {
+        "properties" :
+        [
+            {
+                "requested_interest_rate_property" : false
+            }
+        ]
+    },
+
+    "average_spread_okay" :
+    {
+        "properties" :
+        [
+            {
+                "average_spread_property" : true
+            }
+        ]
+    }
+}
